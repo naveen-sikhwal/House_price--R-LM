@@ -447,7 +447,7 @@ plot(Train_new$Sale_Price, residuals(Model_5))
 cooksd=CookD(Model_5)
 
 # here 2 data points are impacting our model # 524 & 1299
-# lets check the 2 data points
+# lets remove the 2 data points and remodel
 
 Train_new <- Train_new[-c(524,1299),]
 
@@ -517,3 +517,4 @@ Test_new$Sale_Price <-  exp(Test_new$Sale_Price)
 head(Train_new$Sale_Price)
 head(Test_new$Sale_Price)
 
+## save the data as per your convenient name and location ##
